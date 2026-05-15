@@ -1,0 +1,28 @@
+package com.shishusneh.app.ui.navigation
+
+import androidx.compose.runtime.Composable
+import androidx.navigation.compose.*
+import com.shishusneh.app.ui.screens.*
+
+@Composable
+fun AppNavGraph() {
+    val navController = rememberNavController()
+
+    NavHost(navController, startDestination = "dashboard") {
+
+        composable("dashboard") { DashboardScreen(navController) }
+        composable("feeding") { FeedingScreen() }
+        composable("growth") { GrowthScreen() }
+        composable("vaccination") { VaccinationScreen() }
+        composable("milestone") { MilestoneScreen() }
+        composable("insights") { InsightsScreen() }
+        composable("profile") { ProfileScreen() }
+        composable("chat") { AIChatScreen() }
+        composable("sleep") { SleepScreen() }
+        composable("diaper") { DiaperScreen() }
+        composable("mother") { MotherHealthScreen() }
+        composable("emergency") { EmergencyScreen() }
+        composable("report") { HealthReportScreen() }
+        composable("schemes") { SchemesScreen() }
+    }
+}
